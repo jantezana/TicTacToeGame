@@ -1,29 +1,16 @@
 package com.mojix.tictactoe.model;
 
 /**
- * Player class.
+ * Player interface.
  *
  * @version 2019/07/09
  */
-public class Player {
-
-    private String name;
+public interface Player {
 
     /**
-     * Builds an instance of Player.
+     * Gets the info.
      *
-     * @param name the name
+     * @return the info
      */
-    public Player(final String name) {
-        this.name = name;
-    }
-
-    /**
-     * Gets the name.
-     *
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
+    String getInfo();
 }

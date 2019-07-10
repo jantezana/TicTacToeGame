@@ -11,82 +11,34 @@ import java.util.LinkedList;
  *
  * @version 2019/07/09
  */
-public class TicTacToeGame {
+public class TicTacToeGame implements Game {
 
     private static final Logger logger = LoggerFactory.getLogger(TicTacToeGame.class);
     private Board board;
     private Collection<Player> players;
 
-    /**
-     * Builds an instance of TicTacToeGame.
-     */
-    private TicTacToeGame(Board board, Collection<Player> players) {
-        this.board = board;
-        this.players = players;
-    }
+    @Override
+    public void create() {
+        logger.info("Creating the game");
 
-    /**
-     * Start the game.
-     */
-    public void start() {
-        logger.info("Starting the game");
-    }
+        logger.info("Creating the players");
+        PlayerFactory playerFactory = new PlayerFactory();
+        TicTacToePlayer player1 = (TicTacToePlayer) playerFactory.createPlayer(PlayerType.TIC_TAC_TOE);
+        player1.setName("player1");
 
-    public static class Builder {
+        TicTacToePlayer player2 = (TicTacToePlayer) playerFactory.createPlayer(PlayerType.TIC_TAC_TOE);
+        player2.setName("player2");
 
-        private Board board;
-        private Collection<Player> players;
+        this.players = new LinkedList<>();
+        this.players.add(player1);
+        this.players.add(player2);
 
-        /**
-         * Builds a instance of Builder.
-         */
-        public Builder() {
-            this.board = new Board(3);
-            this.players = new LinkedList<>();
+        this.players.stream().forEach(player -> System.out.println(player.getInfo()));
 
-            this.InitializePlayers();
-        }
+        BoardFactory boardFactory = new BoardFactory();
+        this.board = boardFactory.createBoard(BoardType.TIC_TAC_TOE);
+        this.board.draw();
 
-        /**
-         * initialize fake players.
-         */
-        private void InitializePlayers() {
-            Player player1 = new Player("player1");
-            Player player2 = new Player("player2");
 
-            this.players.add(player1);
-            this.players.add(player2);
-        }
-
-        /**
-         * Sets the board.
-         *
-         * @param board the new board
-         * @return the builder
-         */
-        public Builder setBoard(final Board board) {
-            this.board = board;
-            return this;
-        }
-
-        /**
-         * Sets the list of players
-         *
-         * @param players the list of players
-         * @return the builder
-         */
-        public Builder setPlayers(final Collection<Player> players) {
-            this.players = players;
-            return this;
-        }
-
-        /**
-         * Builds the game;
-         *
-         * @return the TicTacToeGame
-         */
-        public TicTacToeGame build() {
-            return new TicTacToeGame(board, players);
-        }
     }
 }

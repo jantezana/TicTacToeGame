@@ -1,14 +1,14 @@
 package com.mojix.tictactoe.model;
 
 /**
- * Board interface.
+ * Game interface.
  *
  * @version 2019/07/09
  */
-public interface Board {
+public interface Game {
 
     /**
-     * Draws the board.
+     * Creates the game.
      */
-    void draw();
+    void create();
 }
