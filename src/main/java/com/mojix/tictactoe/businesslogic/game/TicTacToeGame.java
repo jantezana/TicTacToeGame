@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * TicTacToeGame class.
@@ -21,10 +22,10 @@ import java.util.LinkedList;
 public class TicTacToeGame implements Game {
 
     private static final Logger logger = LoggerFactory.getLogger(TicTacToeGame.class);
-    public static final String SYMBOL_PLAYER_1 = "X";
-    public static final String SYMBOL_PLAYER_2 = "O";
+    private static final String SYMBOL_PLAYER_1 = "X";
+    private static final String SYMBOL_PLAYER_2 = "O";
     private Board board;
-    private Collection<Player> players;
+    private List<Player> players;
 
     @Override
     public void create(String player1Name, String player2Name) {
@@ -47,5 +48,14 @@ public class TicTacToeGame implements Game {
         BoardFactory boardFactory = new BoardFactory();
         this.board = boardFactory.createBoard(BoardType.TIC_TAC_TOE);
         this.board.draw();
+
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
     }
 }

@@ -26,6 +26,10 @@ public class TicTacToeBoard implements Board {
         boxes = new Box[size][size];
     }
 
+    public void mark(String symbol, int row, int column){
+        boxes[row][column]=new Box<>(symbol);
+    }
+
     @Override
     public void draw() {
         logger.info("Drawing the board");

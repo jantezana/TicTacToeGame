@@ -4,8 +4,8 @@ package com.mojix.tictactoe.businesslogic.engine;
  * Position in the TicTacToe board
  */
 public class TicTacToePosition implements Position{
-    int x;
-    int y;
+    private int x;
+    private int y;
 
     /**
      * Create a TicTacToe board position
