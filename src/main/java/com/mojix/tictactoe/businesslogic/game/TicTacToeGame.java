@@ -47,7 +47,5 @@ public class TicTacToeGame implements Game {
         BoardFactory boardFactory = new BoardFactory();
         this.board = boardFactory.createBoard(BoardType.TIC_TAC_TOE);
         this.board.draw();
-
-
     }
 }

@@ -16,5 +16,8 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.26'
     // guava
     compile group: 'com.google.guava', name: 'guava', version: '22.0'
+    // guice
+    compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+    // unit tests
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
