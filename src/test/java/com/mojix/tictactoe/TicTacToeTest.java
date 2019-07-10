@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.junit.Assert.assertTrue;
+
 public class TicTacToeTest {
     private static final Logger logger = LoggerFactory.getLogger(TicTacToeTest.class);
     private TicTacToeGame game;
@@ -32,7 +34,8 @@ public class TicTacToeTest {
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(1, 1));
         ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 1));
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(0, 0));
-
-        //Assert.assertTrue(ticTacToeGameEngine.checkWinner());
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 0));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(2, 2));
+        //assertTrue(ticTacToeGameEngine.checkWinner());
     }
 }
