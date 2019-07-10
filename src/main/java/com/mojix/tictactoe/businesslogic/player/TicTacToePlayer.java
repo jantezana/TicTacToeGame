@@ -1,4 +1,4 @@
-package com.mojix.tictactoe.model;
+package com.mojix.tictactoe.businesslogic.player;
 
 import com.google.common.base.Preconditions;
 
@@ -10,7 +10,7 @@ import com.google.common.base.Preconditions;
 public class TicTacToePlayer implements Player {
 
     private String name;
-
+    private String symbol;
     /**
      * Builds an instance of TicTacToePlayer.
      */
@@ -32,6 +32,7 @@ public class TicTacToePlayer implements Player {
      *
      * @return the name
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -41,6 +42,7 @@ public class TicTacToePlayer implements Player {
      *
      * @param name the new name
      */
+    @Override
     public void setName(final String name) {
         Preconditions.checkNotNull(name, "The name is null");
         this.name = name;
@@ -49,5 +51,21 @@ public class TicTacToePlayer implements Player {
     @Override
     public String getInfo() {
         return String.format("Name: %s", this.name);
+    }
+
+    /**
+     * The player symbol
+     * @return a character
+     */
+    public String getSymbol() {
+        return symbol;
+    }
+
+    /**
+     * The player symbol
+     * @param symbol a character
+     */
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
     }
 }

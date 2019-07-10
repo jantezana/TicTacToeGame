@@ -1,4 +1,4 @@
-package com.mojix.tictactoe.model;
+package com.mojix.tictactoe.businesslogic.player;
 
 /**
  * Player interface.
@@ -13,4 +13,8 @@ public interface Player {
      * @return the info
      */
     String getInfo();
+
+    String getName();
+
+    void setName(String name);
 }

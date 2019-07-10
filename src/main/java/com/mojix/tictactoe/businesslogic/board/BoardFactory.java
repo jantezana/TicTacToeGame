@@ -1,4 +1,4 @@
-package com.mojix.tictactoe.model;
+package com.mojix.tictactoe.businesslogic.board;
 
 import com.google.common.base.Preconditions;
 

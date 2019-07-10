@@ -1,5 +1,6 @@
-package com.mojix.tictactoe.model;
+package com.mojix.tictactoe.businesslogic.board;
 
+import com.mojix.tictactoe.businesslogic.game.TicTacToeGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

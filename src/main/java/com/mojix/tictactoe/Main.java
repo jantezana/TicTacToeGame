@@ -1,7 +1,7 @@
 package com.mojix.tictactoe;
 
-import com.mojix.tictactoe.model.Game;
-import com.mojix.tictactoe.model.TicTacToeGame;
+import com.mojix.tictactoe.businesslogic.game.Game;
+import com.mojix.tictactoe.businesslogic.game.TicTacToeGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +22,6 @@ public class Main {
     public static void main(String args[]) {
         logger.info("Tic Tac Toe game");
         Game game = new TicTacToeGame();
-        game.create();
+        game.create("Player1", "Player2");
     }
 }
