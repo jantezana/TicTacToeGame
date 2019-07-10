@@ -24,8 +24,8 @@ public class TicTacToeTest {
     }
 
     @Test
-    public void testGameWithWinner() {
-        logger.info("Tic Tac Toe game test with a winner");
+    public void testGameWithWinnerPlayerOne() {
+        logger.info("Tic Tac Toe game test with a winner:Player1");
         Player player1 = game.getPlayers().get(0);
         Player player2 = game.getPlayers().get(1);
         TicTacToeBoard board = (TicTacToeBoard) game.getBoard();
@@ -37,5 +37,45 @@ public class TicTacToeTest {
         ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 0));
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(2, 2));
         //assertTrue(ticTacToeGameEngine.checkWinner());
+
+    }
+
+    @Test
+    public void testGameWithWinnerPlayerTwo() {
+        logger.info("Tic Tac Toe game test with a winner:Player2");
+        Player player1 = game.getPlayers().get(0);
+        Player player2 = game.getPlayers().get(1);
+        TicTacToeBoard board = (TicTacToeBoard) game.getBoard();
+
+        GameEngine ticTacToeGameEngine = new TicTacToeGameEngine();
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(1, 2));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(0, 0));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(1, 1));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(1, 0));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(0, 2));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 0));
+        //assertTrue(ticTacToeGameEngine.checkWinner());
+
+    }
+
+    @Test
+    public void testGameWithMatch() {
+        logger.info("Tic Tac Toe game test with a tie");
+        Player player1 = game.getPlayers().get(0);
+        Player player2 = game.getPlayers().get(1);
+        TicTacToeBoard board = (TicTacToeBoard) game.getBoard();
+
+        GameEngine ticTacToeGameEngine = new TicTacToeGameEngine();
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(1, 1));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(0, 0));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(2, 1));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(0, 1));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(0, 2));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 0));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(1, 0));
+        ticTacToeGameEngine.play(player2, board, new TicTacToePosition(1, 2));
+        ticTacToeGameEngine.play(player1, board, new TicTacToePosition(2, 2));
+        //assertTrue(ticTacToeGameEngine.checkWinner());
+
     }
 }
