@@ -39,5 +39,6 @@ public class TicTacToeBoard implements Board {
             }
             System.out.println();
         }
+        System.out.println();
     }
 }
