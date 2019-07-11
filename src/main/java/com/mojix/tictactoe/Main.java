@@ -43,6 +43,6 @@ public class Main {
         game.create("Player1", "Player2");
 
         logger.info("Starting the game");
-        engine.checkWinner();
+        engine.checkWinner(((TicTacToeGame) game).getBoard());
     }
 }

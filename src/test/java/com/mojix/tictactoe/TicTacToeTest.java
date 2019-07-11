@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class TicTacToeTest {
@@ -36,8 +37,7 @@ public class TicTacToeTest {
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(0, 0));
         ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 0));
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(2, 2));
-        //assertTrue(ticTacToeGameEngine.checkWinner());
-
+        assertTrue(ticTacToeGameEngine.checkWinner(board));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class TicTacToeTest {
         ticTacToeGameEngine.play(player2, board, new TicTacToePosition(1, 0));
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(0, 2));
         ticTacToeGameEngine.play(player2, board, new TicTacToePosition(2, 0));
-        //assertTrue(ticTacToeGameEngine.checkWinner());
+        assertTrue(ticTacToeGameEngine.checkWinner(board));
 
     }
 
@@ -75,7 +75,7 @@ public class TicTacToeTest {
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(1, 0));
         ticTacToeGameEngine.play(player2, board, new TicTacToePosition(1, 2));
         ticTacToeGameEngine.play(player1, board, new TicTacToePosition(2, 2));
-        //assertTrue(ticTacToeGameEngine.checkWinner());
-
+        assertFalse(ticTacToeGameEngine.checkWinner(board));
+        assertTrue(ticTacToeGameEngine.gameOver(board));
     }
 }

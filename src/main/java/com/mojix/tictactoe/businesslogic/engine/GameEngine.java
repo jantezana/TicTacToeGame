@@ -17,13 +17,15 @@ public interface GameEngine {
 
     /**
      * If there is a winner
+     * @param board the board to check
      * @return True if there is a winner
      */
-    boolean checkWinner();
+    boolean checkWinner(Board board);
 
     /**
      * If the game is over
+     * @param board the board to check
      * @return true if the game is over
      */
-    boolean gameOver();
+    boolean gameOver(Board board);
 }
