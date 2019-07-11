@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.mojix.tictactoe.businesslogic.board.Board</OriginalElement>
+  <nodes>
+    <node x="448.0" y="517.0">com.mojix.tictactoe.businesslogic.board.Box</node>
+    <node x="311.0" y="76.0">com.mojix.tictactoe.businesslogic.engine.TicTacToeGameEngine</node>
+    <node x="0.0" y="446.0">com.mojix.tictactoe.businesslogic.game.TicTacToeGame</node>
+    <node x="31.5" y="223.0">com.mojix.tictactoe.businesslogic.engine.Position</node>
+    <node x="329.0" y="517.0">com.mojix.tictactoe.Main</node>
+    <node x="0.0" y="299.0">com.mojix.tictactoe.businesslogic.engine.TicTacToePosition</node>
+    <node x="141.25" y="152.0">com.mojix.tictactoe.businesslogic.board.BoardType</node>
+    <node x="342.5" y="0.0">com.mojix.tictactoe.businesslogic.engine.GameEngine</node>
+    <node x="241.5" y="223.0">com.mojix.tictactoe.businesslogic.player.Player</node>
+    <node x="136.0" y="0.0">java.io.Serializable</node>
+    <node x="437.5" y="223.0">com.mojix.tictactoe.businesslogic.board.Board</node>
+    <node x="364.0" y="370.0">com.mojix.tictactoe.businesslogic.board.BoardFactory</node>
+    <node x="175.0" y="517.0">com.mojix.tictactoe.util.Constants</node>
+    <node x="92.5" y="76.0">java.lang.Enum</node>
+    <node x="406.0" y="299.0">com.mojix.tictactoe.businesslogic.board.TicTacToeBoard</node>
+    <node x="0.0" y="0.0">java.lang.Comparable</node>
+    <node x="31.5" y="370.0">com.mojix.tictactoe.businesslogic.game.Game</node>
+    <node x="210.0" y="299.0">com.mojix.tictactoe.businesslogic.player.TicTacToePlayer</node>
+    <node x="0.0" y="517.0">com.mojix.tictactoe.module.EngineModule</node>
+    <node x="5.25" y="152.0">com.mojix.tictactoe.businesslogic.player.PlayerType</node>
+    <node x="182.0" y="370.0">com.mojix.tictactoe.businesslogic.player.PlayerFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.mojix.tictactoe.businesslogic.player.PlayerType" target="java.lang.Enum">
+      <point x="0.0" y="-13.0" />
+      <point x="63.25" y="127.0" />
+      <point x="111.0" y="127.0" />
+      <point x="-18.5" y="13.0" />
+    </edge>
+    <edge source="com.mojix.tictactoe.businesslogic.board.BoardType" target="java.lang.Enum">
+      <point x="0.0" y="-13.0" />
+      <point x="195.75" y="127.0" />
+      <point x="148.0" y="127.0" />
+      <point x="18.5" y="13.0" />
+    </edge>
+    <edge source="com.mojix.tictactoe.businesslogic.engine.TicTacToeGameEngine" target="com.mojix.tictactoe.businesslogic.engine.GameEngine">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="18.5" y="-13.0" />
+      <point x="148.0" y="51.0" />
+      <point x="201.0" y="51.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="com.mojix.tictactoe.businesslogic.game.TicTacToeGame" target="com.mojix.tictactoe.businesslogic.game.Game">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="com.mojix.tictactoe.businesslogic.engine.TicTacToePosition" target="com.mojix.tictactoe.businesslogic.engine.Position">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="com.mojix.tictactoe.businesslogic.board.TicTacToeBoard" target="com.mojix.tictactoe.businesslogic.board.Board">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="-18.5" y="-13.0" />
+      <point x="111.0" y="51.0" />
+      <point x="58.0" y="51.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="com.mojix.tictactoe.businesslogic.player.TicTacToePlayer" target="com.mojix.tictactoe.businesslogic.player.Player">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="160.0" y="250.0" />
+  <SelectedNodes>
+    <node>com.mojix.tictactoe.businesslogic.board.Box</node>
+    <node>com.mojix.tictactoe.businesslogic.engine.TicTacToeGameEngine</node>
+    <node>com.mojix.tictactoe.businesslogic.game.TicTacToeGame</node>
+    <node>com.mojix.tictactoe.businesslogic.engine.Position</node>
+    <node>com.mojix.tictactoe.Main</node>
+    <node>com.mojix.tictactoe.businesslogic.engine.TicTacToePosition</node>
+    <node>com.mojix.tictactoe.businesslogic.board.BoardType</node>
+    <node>com.mojix.tictactoe.businesslogic.engine.GameEngine</node>
+    <node>com.mojix.tictactoe.businesslogic.player.Player</node>
+    <node>java.io.Serializable</node>
+    <node>com.mojix.tictactoe.businesslogic.board.Board</node>
+    <node>com.mojix.tictactoe.businesslogic.board.BoardFactory</node>
+    <node>com.mojix.tictactoe.util.Constants</node>
+    <node>java.lang.Enum</node>
+    <node>com.mojix.tictactoe.businesslogic.board.TicTacToeBoard</node>
+    <node>java.lang.Comparable</node>
+    <node>com.mojix.tictactoe.businesslogic.game.Game</node>
+    <node>com.mojix.tictactoe.businesslogic.player.TicTacToePlayer</node>
+    <node>com.mojix.tictactoe.module.EngineModule</node>
+    <node>com.mojix.tictactoe.businesslogic.player.PlayerType</node>
+    <node>com.mojix.tictactoe.businesslogic.player.PlayerFactory</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
